@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      Colectivos en ruta
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div id="checkbox-container">
+    <ion-icon name="caret-back-outline" color="primary" size="large" routerLink="/menu-principal"></ion-icon>
+    <ion-checkbox id="layer0" type="checkbox" (click)='toggleLayer(0)' class="ruta-ida"> Ruta 17A Ida </ion-checkbox>
+    <ion-checkbox id="layer1" type="checkbox" (click)='toggleLayer(2)' class="ruta-regreso"> Ruta 17A Regreso </ion-checkbox>
+  </div>
+  <div id="map-container" fullscreen="true">
+    <capacitor-google-map id="map" scrollY="false" #map></capacitor-google-map>
+  </div>
+</ion-content>
+
+

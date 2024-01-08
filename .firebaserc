@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "test-9bd11": {
+      "hosting": {
+        "app": [
+          "lineacolectivos"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "test-9bd11"
+  }
+}

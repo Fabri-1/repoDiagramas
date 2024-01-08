@@ -1,0 +1,74 @@
+
+@-webkit-keyframes color-change-2x{0%{background:#1a0b5e}100%{background: #3b1d4d;}}@keyframes color-change-2x{0%{background:#1a0b5e}100%{background:#3b1d4d}}
+  
+.background-image {
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-animation:color-change-2x 10s linear infinite alternate both;
+  animation:color-change-2x 10s linear infinite alternate both
+}
+
+.menu-map{
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5)), url('../../assets/img/card.jpg') right/cover no-repeat;
+}
+
+.menu-map::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  filter:blur(5px);
+}
+
+.menu-map ion-card-title{
+  color:rgb(119, 105, 23);
+  font-weight: bold;
+}
+
+.menu-map ion-card-content{
+  font-weight: bold;
+  color: black;
+}
+
+ion-card-content{
+  padding:15px;
+  text-align:center;
+}
+
+.info{
+  display: flex;
+  justify-content: space-between;
+}
+
+.info ion-card {
+  width: 48%;
+}
+
+.bottom-text {
+  justify-content: flex-end;
+}
+
+.admin{
+  background-image: url(../../assets/img/admin.png);
+}
+
+.encuesta-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 200px; 
+}
+
+.encuesta-text {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  color: white; 
+}

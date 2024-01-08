@@ -1,0 +1,69 @@
+.pantalla{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-out; 
+}
+
+@keyframes pantalla{
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+}
+
+.background-image{
+  background-image: url('../../assets/img/taxis.jpg');
+  background-size: cover;
+  filter: blur(5px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 50%;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+@media(min-width: 769px){
+  form{
+    width: 500px;
+    padding: 50px 10px; 
+  }
+}
+
+ion-item{
+  --background:transparent;
+}
+.centrado{
+  display:flex;
+  justify-items: center;
+  align-items: center;
+  background-color: rgba(255, 254, 254, 0.7); 
+  padding: 10px;
+}
+
+.titulo{
+  padding-top:5%;
+}
+
+.foto{
+  background-image: url(../../assets/img/admin.png);
+}
+ 
+@-webkit-keyframes scale-in-hor-left{0%{-webkit-transform:scaleX(0);transform:scaleX(0);-webkit-transform-origin:0 0;transform-origin:0 0;opacity:1}100%{-webkit-transform:scaleX(1);transform:scaleX(1);-webkit-transform-origin:0 0;transform-origin:0 0;opacity:1}}@keyframes scale-in-hor-left{0%{-webkit-transform:scaleX(0);transform:scaleX(0);-webkit-transform-origin:0 0;transform-origin:0 0;opacity:1}100%{-webkit-transform:scaleX(1);transform:scaleX(1);-webkit-transform-origin:0 0;transform-origin:0 0;opacity:1}}
+
+.texto{
+  -webkit-animation:scale-in-hor-left .5s cubic-bezier(.25,.46,.45,.94) both;
+  animation:scale-in-hor-left .5s cubic-bezier(.25,.46,.45,.94) both;
+}
+
+.boton{
+  -webkit-animation:scale-in-hor-left .5s cubic-bezier(.25,.46,.45,.94) both;
+  animation:scale-in-hor-left .5s cubic-bezier(.25,.46,.45,.94) both
+}

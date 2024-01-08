@@ -1,0 +1,60 @@
+<ion-content class="menu-container">
+  <app-header></app-header>
+  <div class="background-image"></div>
+
+  <ion-card class="menu-map" routerLink="/mapa">
+    <ion-card-header>
+      <ion-card-title>Colectivos en ruta 17</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>Ver los colectivos activos actualmente para la Villa Caupolican</ion-card-content>
+  </ion-card>
+  
+  <ion-card class="menu-map" routerLink="/mapa2">
+    <ion-card-header>
+      <ion-card-title>Colectivos en ruta 17A</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>Ver los colectivos activos actualmente para el Fundo El Carmen</ion-card-content>
+  </ion-card>  
+
+  <div class="info">
+  <ion-card class="bottom-text"  color="light">
+    <ion-label>
+      Horario de Lunes a Domigo:
+      6:00am A 24:00pm
+    </ion-label>
+  </ion-card>
+
+  <ion-card  color="light">
+    <ion-label>
+      Número de contacto para la Linea:
+      45 2223265
+    </ion-label>
+  </ion-card>
+  </div>
+
+  <ion-card class="encuesta-card" (click)="redirigirEncuesta('usuarios')">
+    <img alt="Silhouette of mountains" src="https://t4.ftcdn.net/jpg/05/08/07/71/360_F_508077111_ZHFjcVoXe5QGIcwY1GOcCGcru7AmeLiC.jpg" />
+    <div class="encuesta-text">
+      <ion-card-title>Encuesta para Usuarios</ion-card-title>
+      <ion-card-subtitle>Nos gustaria saber tu opinión, pulsa para participar</ion-card-subtitle>
+    </div>
+  </ion-card>
+  
+  <ion-card class="encuesta-card" (click)="redirigirEncuesta('conductores')">
+    <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    <div class="encuesta-text">
+      <ion-card-title>Encuesta para Conductores</ion-card-title>
+      <ion-card-subtitle>Encuesta hecha para conductores, pulsa para participar</ion-card-subtitle>
+    </div>
+  </ion-card>
+  
+
+ <ion-card>
+  <ion-card-header class="menu-admin">
+    <ion-card-title expand="full" fill="clear" (click)="openAdminMenu()">
+      Administración<img class="admin">
+    </ion-card-title>
+  </ion-card-header>
+</ion-card>
+
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-content>
+  <app-header color="yellow" backButton="/menu-principal"></app-header>
+  <div class="background-image"></div>
+  <br>
+  <h4>Añada un vehiculo:</h4>
+  <form (ngSubmit)="onSubmit()">
+    <ion-input type="text" placeholder="Patente" ></ion-input>
+
+    <ion-select placeholder="Seleccione la marca" icon="mail-outline" >
+      <ion-select-option value="nissan">Nissan</ion-select-option>
+      <ion-select-option value="toyota">Toyota</ion-select-option>
+      <ion-select-option value="Chevrolet">Chevrolet</ion-select-option>
+      <ion-select-option value="citroen">Citroen</ion-select-option>
+      <ion-select-option value="hyundai">Hyundai</ion-select-option>
+    </ion-select>
+
+    <ion-button type="submit">Añadir Colectivo</ion-button>
+  </form>
+  
+  <h4>Lista de vehiculos registrados</h4>
+  <div class="vehicles">
+    <div class="place" *ngFor="let vehicle of vehicle">
+      <div class="info">
+        <img *ngIf="vehicle.model === 'Nissan'" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.car-brand-names.com%2Fwp-content%2Fuploads%2F2015%2F08%2FNissan-logo.png&f=1&nofb=1&ipt=6f36eaa7de29826c0ae1f560d488b7eb3580995be6e7ba5f5fecb8ec64b86f61&ipo=images">
+        <img *ngIf="vehicle.model === 'Toyota'" src="http://pluspng.com/img-png/toyota-logo-png-toyota-logo-2957.jpg">
+        <h4>{{ vehicle.model }}</h4>
+        <p>Patente: {{ vehicle.license }}</p>
+        <ion-button color="danger" class="btn btn-outline-danger" fill="outline" (click)="onClickDelete(vehicle)">Eliminar vehiculo</ion-button>
+      </div>
+    </div>
+  </div>
+  
+</ion-content>
+  
